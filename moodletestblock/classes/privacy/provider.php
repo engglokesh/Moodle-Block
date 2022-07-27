@@ -1,0 +1,27 @@
+<?php
+
+/**
+ * Privacy Subsystem implementation for block_moodletestblock.
+ *
+ * @package    block_moodletestblock
+ * @copyright  2022 Lokesh Malpani
+ 
+ */
+
+namespace block_moodletestblock\privacy;
+
+defined('MOODLE_INTERNAL') || die();
+
+
+class provider implements \core_privacy\local\metadata\null_provider {
+
+    /**
+     * Get the language string identifier with the component's language
+     * file to explain why this plugin stores no data.
+     *
+     * @return  string
+     */
+    public static function get_reason() : string {
+        return 'privacy:metadata';
+    }
+}
